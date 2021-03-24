@@ -9,10 +9,11 @@
   "author": "Manikandan Rajendran",
   "license": "ISC",
   "dependencies": {
-    "ya-done-api": "^1.0.0",
+    "email-validator": "^2.0.4",
+    "expect": "26.4.2",
     "mocha": "^8.1.3",
     "mochawesome": "^4.1.0",
-    "expect": "26.4.2"
+    "ya-done-api": "^1.0.0"
   },
   "devDependencies": {
     "@babel/cli": "7.10.1",

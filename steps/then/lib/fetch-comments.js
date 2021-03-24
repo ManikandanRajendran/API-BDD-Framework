@@ -1,13 +1,18 @@
+import { expect } from 'chai';
+import { fetchComments } from '../../../api-calls/GET-calls';
+import { validateEmail } from '../../../helper/helper';
+
 
 export default function () {
   return (
     this
-      .then('GET the comments using post id',async function testThenSteps() {
-          console.log('test then');
-        })
-
-      .then('validate whether the email address of each comment is valid',async function testThenSteps() {
-        console.log('test then');
-      })
+      .then('GET the comments using post id and validate the email',async function testThenSteps() {
+            for(const id of this.ctx.postIds )
+            {
+              const response = await fetchComments.call(this, id);
+              let result = await validateEmail.call(this, response, id);
+              expect(result).to.be.true;
+            }
+        })      
   );
 }
