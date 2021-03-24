@@ -6,7 +6,7 @@ import { validateEmail } from '../../../helper/helper';
 export default function () {
   return (
     this
-      .then('GET the comments using post id and validate the email',async function testThenSteps()
+      .then('GET the comments using post id and validate the email',async function fetchComment()
       {
           for(const id of this.ctx.postIds )
           {

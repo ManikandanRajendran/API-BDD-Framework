@@ -5,7 +5,7 @@ import { checkUserIds, getPostIds } from '../../../helper/helper';
 export default function () {
   return (
     this
-      .when('GET the posts by using user id', async function testWhenSteps()
+      .when('GET the posts by using user id', async function fetchPosts()
       {
         const response = await fetchPostsDetails.call(this, this.ctx.userId);
         await checkUserIds.call(this, response);
