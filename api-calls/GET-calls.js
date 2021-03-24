@@ -1,6 +1,11 @@
 import {utils} from 'ya-done-api';
 import { basicValidation } from '../helper/helper';
 
+/*
+=========================================================================================
+This function is to fetch the user details based on the input
+=========================================================================================
+*/
 async function fetchUserDetails(username)
 {
     const path = `${this.GLOBAL.baseUrl}users?username=${username}`;
@@ -9,6 +14,12 @@ async function fetchUserDetails(username)
     return response.data;
 }
 
+
+/*
+=========================================================================================
+This function is to fetch the user posts details based user id
+=========================================================================================
+*/
 async function fetchPostsDetails(userId)
 {
     const path = `${this.GLOBAL.baseUrl}posts?userId=${userId}`;
@@ -17,6 +28,12 @@ async function fetchPostsDetails(userId)
     return response.data;
 }
 
+
+/*
+=========================================================================================
+This function is to fetch the comment details for each post id
+=========================================================================================
+*/
 async function fetchComments(postId)
 {
     const path = `${this.GLOBAL.baseUrl}comments?postId=${postId}`;
@@ -24,6 +41,10 @@ async function fetchComments(postId)
     await basicValidation(response, 200, 'OK')
     return response.data;
 }
+
+
+
+
 
 export {
     fetchUserDetails,

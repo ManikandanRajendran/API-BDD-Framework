@@ -6,13 +6,14 @@ import { validateEmail } from '../../../helper/helper';
 export default function () {
   return (
     this
-      .then('GET the comments using post id and validate the email',async function testThenSteps() {
-            for(const id of this.ctx.postIds )
-            {
-              const response = await fetchComments.call(this, id);
-              let result = await validateEmail.call(this, response, id);
-              expect(result).to.be.true;
-            }
-        })      
+      .then('GET the comments using post id and validate the email',async function testThenSteps()
+      {
+          for(const id of this.ctx.postIds )
+          {
+            const response = await fetchComments.call(this, id);
+            let result = await validateEmail.call(this, response, id);
+            expect(result).to.be.true;
+          }
+      })      
   );
 }
