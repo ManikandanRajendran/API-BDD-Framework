@@ -1,0 +1,13 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+.DS_Store
+cat
+
+# compiled test-runner
+/mochawesome-report
+/mochawesome-report/mochawesome.html
+/mochawesome-report/mochawesome.json
+
+# dependencies
+/node_modules
+
+debug.log
