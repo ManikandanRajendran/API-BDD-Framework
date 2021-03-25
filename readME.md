@@ -2,10 +2,6 @@
 
 **A BDD based API automation framework based on JAVASCRIPT**
 
-```
-npm  i  ya-done-api --save
-```
-
 **Libraries used**
 
 1. [ya-done-api](https://www.npmjs.com/package/ya-done-api/v/1.0.0)
@@ -44,6 +40,17 @@ package.json
 **Install and Run**
 
 ```js
-npm  i
-npm  test
+1. clone the repository
+2. install all the packages using `npm  i`
+3. Run the tests using the command `npm  test` or `npm t`
 ```
+
+**Sample results**
+
+Pass Scenario:
+
+![Alt text](passResult.png?raw=true "result")
+
+Fail Scenario:
+
+![Alt text](failureResult.png?raw=true "result")
